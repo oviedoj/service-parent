@@ -17,7 +17,7 @@ mvn clean build install
 Once the project is compiled and installed run the dropwizard server
 
 ```
-com.cnbr.service.api.app.ServiceApp server <PATH to YAML CONF>
+com.cnbr.service.app.ServiceApp server <PATH to YAML CONF>
 ```
 
 ## Built With

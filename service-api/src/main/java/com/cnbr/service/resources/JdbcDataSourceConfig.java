@@ -1,4 +1,4 @@
-package com.cnbr.service.api.resources;
+package com.cnbr.service.resources;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 

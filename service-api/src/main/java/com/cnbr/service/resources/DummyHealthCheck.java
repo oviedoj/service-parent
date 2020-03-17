@@ -1,4 +1,4 @@
-package com.cnbr.service.api.resources;
+package com.cnbr.service.resources;
 
 import com.codahale.metrics.health.HealthCheck;
 

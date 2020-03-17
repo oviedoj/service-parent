@@ -1,12 +1,12 @@
-package com.cnbr.service.api.app;
+package com.cnbr.service.app;
 
 import java.util.TimeZone;
 
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.cnbr.service.api.resources.CustomExceptionManager;
-import com.cnbr.service.api.resources.DummyHealthCheck;
-import com.cnbr.service.api.resources.SpringAppBundle;
+import com.cnbr.service.resources.CustomExceptionManager;
+import com.cnbr.service.resources.DummyHealthCheck;
+import com.cnbr.service.resources.SpringAppBundle;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;

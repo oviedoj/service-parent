@@ -1,4 +1,4 @@
-package com.cnbr.service.api.resources;
+package com.cnbr.service.resources;
 
 import java.util.Map;
 import java.util.Objects;
