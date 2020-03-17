@@ -1,0 +1,26 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 6006
+  adminConnectors:
+    - type: http
+      port: 6007
+
+springAppConfiguration:
+  springFileLocations:
+    - service-api\spring\common\springConfiguration.xml
+
+swagger:
+  resourcePackage: "com.cnbr.service.api"
+  title: Swagger
+  version: DEVELOPMENT
+  contact: Nalle B
+  contactEmail: neli760@gmail.com
+  enabled: true
+  includeSwaggerResource: true
+
+logging:
+  level: INFO
+  loggers:
+    org.apache: WARN
+    org.springframework: INFO

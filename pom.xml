@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cnbr.serive-parent</groupId>
+  <artifactId>service-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>service-conf</module>
+  	<module>service-domain</module>
+  	<module>service-business</module>
+  	<module>service-dao</module>
+  	<module>service-api</module>
+  </modules>
+</project>
