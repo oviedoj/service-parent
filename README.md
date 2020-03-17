@@ -11,7 +11,7 @@ The reason to use dropwizard is its flexibility to add bundles
 Get the project and install it as a maven application
 
 ```
-maven clean build install
+mvn clean build install
 ```
 
 Once the project is compiled and installed run the dropwizard server
@@ -28,4 +28,5 @@ com.cnbr.service.api.app.ServiceApp server <PATH to YAML CONF>
 
 ## Authors
 
-* **oviedoj** **neli**
+* **oviedoj** (https://github.com/oviedoj)
+* **neli** (https://github.com/neli)
