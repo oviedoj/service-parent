@@ -6,6 +6,7 @@
 				http://www.springframework.org/schema/context
 				http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<b:import resource="classpath:service-dao/dao-context/daoContext.xml"/>
 	<context:component-scan base-package="com.cnbr.service" />				
    
 </b:beans>   

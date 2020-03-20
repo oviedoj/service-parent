@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mybatis TransactionDao mapper configuration -->
+<mapper namespace="com.cnbr.service.dao.transaction.RegistroDao">
+
+	<resultMap type="com.cnbr.service.domain.transaction.Registro" id="registroSet">
+		<result property="id" javaType="Integer" jdbcType="NUMERIC" column="id" />
+		<result property="description" javaType="String" jdbcType="VARCHAR" column="descr" />
+		<result property="amount" javaType="java.math.BigDecimal" jdbcType="NUMERIC" column="amount" />
+		<result property="userId" javaType="Integer" jdbcType="NUMERIC" column="user_id" />
+		<result property="insertTs" javaType="java.time.LocalDateTime" jdbcType="TIMESTAMP" column="insert_ts"  />
+		<result property="insertedBy" javaType="String" jdbcType="VARCHAR" column="insert_by" />
+		<result property="updateTs" javaType="java.time.LocalDateTime" jdbcType="TIMESTAMP" column="update_ts"/>
+		<result property="updateBy" javaType="String" jdbcType="VARCHAR" column="updated_by" />
+	</resultMap>
+
+	<select id="getRegistro" parameterType="com.cnbr.service.domain.transaction.Registro" resultMap="registroSet" >
+		select id,
+				user_id,
+				descr,
+				amount,
+				insert_by,
+				insert_ts,
+				updated_by,
+				update_ts
+		from registro where 1 = 1
+			<if test="id != null">
+				AND id = #{id}
+			</if>
+			<if test="userId != null">
+				AND user_id = #{userId}
+			</if>
+			
+	</select>
+</mapper>

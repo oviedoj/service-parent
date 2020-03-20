@@ -10,8 +10,9 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cnbr.service.business.status.StatusBusiness;
-import com.cnbr.service.domain.status.Status;
+import com.cnbr.service.business.transaction.RegistroBusiness;
+import com.cnbr.service.domain.transaction.Registro;
+import com.cnbr.service.domain.utils.ObjectFactory;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,13 +23,13 @@ import io.swagger.annotations.ApiOperation;
 public class ServiceApi {
 
 	@Autowired
-	private StatusBusiness statusBusiness;
+	private RegistroBusiness registroBusiness;
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/getStatusList")
+	@Path("/getRegistroList")
 	@ApiOperation("Get an status in String")
-	public List<Status> getStatusList() {
-		return statusBusiness.getStatusList();
+	public List<Registro> getRegistroList() {
+		return registroBusiness.getRegistroList(ObjectFactory.build(Registro::new, y -> {}));
 	}
 }

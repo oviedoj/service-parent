@@ -1,0 +1,21 @@
+<b:beans xmlns:b = "http://www.springframework.org/schema/beans"
+	xmlns:context ="http://www.springframework.org/schema/context"
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation = "http://www.springframework.org/schema/beans
+				http://www.springframework.org/beans/spring-beans.xsd
+				http://www.springframework.org/schema/context
+				http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<b:bean id="sqlSessionTemplateCNBRDB" class="org.mybatis.spring.SqlSessionTemplate">
+		<b:constructor-arg index="0" ref="sqlSessionFactoryCNBRDB"></b:constructor-arg>
+		<b:constructor-arg value="SIMPLE"></b:constructor-arg>
+	</b:bean>
+   	
+   	<b:bean id="sqlSessionFactoryCNBRDB" class="org.mybatis.spring.SqlSessionFactoryBean">
+   		<b:property name="dataSource" ref="cnbrDataSource"></b:property>
+   		<b:property name="configLocation" value="classpath:service-dao/mybatis/mybatis-config.xml"></b:property>
+   		<b:property name="mapperLocations" value="classpath*:service-dao/mybatis/mapper/**/*.xml"></b:property>
+   	</b:bean>
+   	
+</b:beans>   
